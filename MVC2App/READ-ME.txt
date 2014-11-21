@@ -1,0 +1,8 @@
+﻿Files of interest:
+* Controllers/AiHandleErrorAttribute.cs
+* Controllers/HomeController.cs
+
+
+* Update ApplicationInsights.config with a valid InstrumentationKey (obtained from the AppInsights portal)
+* Run the application. The about and contact pages throw unhandled exceptions sometimes
+* Change Web.config to check behavior with different CustomErrors settings
