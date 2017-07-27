@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Web.Mvc;
 using Microsoft.ApplicationInsights;
 
 namespace MVC2App.Controllers
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)] 
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
     public class AiHandleErrorAttribute : HandleErrorAttribute
     {
         public override void OnException(ExceptionContext filterContext)
@@ -16,7 +16,7 @@ namespace MVC2App.Controllers
                 {
                     var ai = new TelemetryClient();
                     ai.TrackException(filterContext.Exception);
-                }                
+                }
             }
             base.OnException(filterContext);
         }
